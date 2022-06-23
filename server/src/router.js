@@ -5,7 +5,10 @@ const isLoggedIn = require("./middleware/isLoggedIn");
 
 router.post("/login", require("./routes/loginRoute"));
 
-router.get("/todos", isLoggedIn, require("./routes/todosRoute"));
+router.get("/todos", isLoggedIn, require("./routes/readTodosRoute"));
+router.post("/todos", isLoggedIn, require("./routes/createTodoRoute"));
+//update
+//delete
 
 //making a module
 module.exports = router;
